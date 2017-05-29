@@ -1,0 +1,22 @@
+{
+  "name": "mongoose-todo",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Luis Alberto <fernandezc.alberto@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lfernandezcall/mongoose-todo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}

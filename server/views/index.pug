@@ -1,0 +1,30 @@
+form(action='/tasks' method='POST')
+  input(type='text', name='title', value='', autofocus)
+  input(type='submit', value='Submit')
+
+
+
+ul
+  each task in data
+    li 
+      span#addHidden #{task.title}
+      input#removeHidden(type='text', name='updateTitle', value='', autofocus)
+      a.updateTitle(href=`/task/${task.id}`) Modify
+      br
+      a.remove(href=`/task/${task.id}`) Remove
+      br
+      span Created at: #{new Date(task.creationDate)}
+      br
+      if task.modifiedDate
+        span Modified at: #{Date(task.modifiedDate)}
+      
+
+
+
+script(src="bower_components/jquery/dist/jquery.js")
+script(src="js/main.js")
+
+
+
+
+
