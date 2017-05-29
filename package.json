@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "prestart": "npm install",
+    "postinstall": "bower install",
     "start": "node app",
     "dev": "nodemon server/app"
   },
@@ -13,5 +15,8 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongoose": "^4.10.2"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
   }
 }
