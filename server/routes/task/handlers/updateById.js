@@ -1,4 +1,4 @@
-const Task = require('../../../models/task')
+const Task = require('../../../models/Task')
 
 function updateById (req, res) {
   const { id } = req.params

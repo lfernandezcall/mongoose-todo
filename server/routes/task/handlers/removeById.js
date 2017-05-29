@@ -1,4 +1,4 @@
-const Task = require('../../../models/task')
+const Task = require('../../../models/Task')
 
 function removeById (req, res) {
   const { id } = req.params
