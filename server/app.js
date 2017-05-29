@@ -10,6 +10,8 @@ app.use(express.static('public'))
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
 
+console.log(app.get('views'))
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
