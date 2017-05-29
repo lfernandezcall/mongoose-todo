@@ -17,11 +17,8 @@ const routerTask = require('./routes/task')
 
 if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
 
-const dbUrl = 'mongodb://localhost:27017/test'
-const PORT = 3000
-
 mongoose.promise = Promise
-mongoose.connect(dbUrl)
+mongoose.connect(process.env.DB_URL)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -30,4 +27,4 @@ app.use(bodyParser.json())
 app.use('/tasks', routerTasks)
 app.use('/task', routerTask)
 
-app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`))
+app.listen(process.env.PORT, () => console.log(`Listening on PORT ${PORT}`))
