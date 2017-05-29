@@ -12,9 +12,10 @@ app.set('views', 'server/views')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// const routerCheckCredentials = require('./routes/middlewares/checkCredentials')
-const routerTasks = require('./routes/Tasks')
-const routerTask = require('./routes/Task')
+const routerTasks = require('./routes/tasks')
+const routerTask = require('./routes/task')
+
+if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
 
 const dbUrl = 'mongodb://localhost:27017/test'
 const PORT = 3000
