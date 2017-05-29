@@ -18,7 +18,7 @@ const routerTask = require('./routes/task')
 if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
 
 mongoose.promise = Promise
-mongoose.connect(process.env.DB_URL)
+mongoose.connect(process.env.DB_URI)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
